@@ -1,7 +1,9 @@
 package com.codecool.gracjanc.zlotowataxi.taxicab;
 
 import com.codecool.gracjanc.zlotowataxi.exception.TaxiCabNotFoundException;
+import org.springframework.stereotype.Service;
 
+@Service
 public class TaxiCabServiceImpl implements TaxiCabService {
     private TaxiCabRepository taxiCabRepository;
 
