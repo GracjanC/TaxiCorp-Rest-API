@@ -13,14 +13,10 @@ public class TaxiCab {
     private String model;
     private String licensePlate;
 
-    @OneToOne(mappedBy = "taxiCab", cascade = CascadeType.PERSIST)
-    private Driver driver;
-
-    public TaxiCab(String make, String model, String licensePlate, Driver driver) {
+    public TaxiCab(String make, String model, String licensePlate) {
         this.make = make;
         this.model = model;
         this.licensePlate = licensePlate;
-        this.driver = driver;
     }
 
     public TaxiCab() {
@@ -48,14 +44,6 @@ public class TaxiCab {
 
     public void setLicensePlate(String licensePlate) {
         this.licensePlate = licensePlate;
-    }
-
-    public Driver getDriver() {
-        return driver;
-    }
-
-    public void setDriver(Driver driver) {
-        this.driver = driver;
     }
 
     public Integer getId() {

@@ -13,7 +13,7 @@ public class Driver {
     private String lastName;
     private String city;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     private TaxiCab taxiCab;
 
     public Driver(String firstName, String lastName, String city, TaxiCab taxiCab) {
